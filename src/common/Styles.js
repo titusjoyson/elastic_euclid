@@ -9,4 +9,4 @@ const commonStyle = StyleSheet.create({
   },
 });
 
-module.exports = commonStyle
+module.exports = {commonStyle}
