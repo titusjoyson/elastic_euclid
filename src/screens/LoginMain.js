@@ -25,13 +25,13 @@ export default class Login extends Component {
             placeholder = "Email or username"
             returnKeyType = "next"
             inputRef = 'usenameFeald'
-            onSubmitEditing={(event)=>{this.refs.passwordField.focus()}}
+            onSubmitEditing={() => this.passwordInput.focus()}
           />
           <InputBox
             placeholder = "Password"
             secureTextEntery = {"true"}
             returnKeyType = "go"
-            inputRef = 'passwordField'
+            inputRef = {(passwordInput) => this.passwordInput = passwordInput}
             typePassword = {true}
             onSubmitEditing={(event)=>{}}
           />

@@ -6,9 +6,6 @@ import {
 } from 'react-native';
 
 export default class InputBox extends Component {
-    d(){
-        this.refs.passwordField.focus();
-    };
 
     render(){
         return(
