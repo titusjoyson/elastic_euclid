@@ -13,11 +13,8 @@ export default class InputBox extends Component {
                 style = {style.input}
                 underlineColorAndroid='rgba(255,255,255,0.7)' 
                 placeholderTextColor = "rgba(255,255,255,0.6)"
+                { ...this.props }
                 ref = {this.props.inputRef}
-                placeholder = {this.props.placeholder}
-                secureTextEntry={this.props.typePassword}
-                returnKeyType = {this.props.returnKeyType}
-                onSubmitEditing = {this.props.onSubmitEditing}
             />
         )
     }

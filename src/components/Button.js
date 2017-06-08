@@ -9,7 +9,9 @@ import {
 export default class CommonButton extends Component {
     render() {
         return (
-            <TouchableOpacity style={style.button}>
+            <TouchableOpacity 
+                style={style.button}
+                { ...this.props }>
                 <Text style={style.buttonText} >{this.props.title}</Text>
             </TouchableOpacity>
         )
