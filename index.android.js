@@ -8,4 +8,4 @@ import {
 import Signup from './src/screens/SignupPage';
 import Login from './src/screens/LoginMain';
 
-AppRegistry.registerComponent('elastic_euclid', () => Login);
+AppRegistry.registerComponent('elastic_euclid', () => Signup);

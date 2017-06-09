@@ -17,6 +17,7 @@ export default class BackToLogin extends Component {
         return (
             <TouchableNativeFeedback
                 onPress={this._redirectToLogin}
+                style={{flex:1}}
             >
                 <View>
                     <Text style={style.backToLogin}>Back to Login</Text>
