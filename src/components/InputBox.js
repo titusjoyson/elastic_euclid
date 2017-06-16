@@ -22,7 +22,7 @@ export default class InputBox extends Component {
 
 const style = StyleSheet.create({
     input: {
-        height: 40,
+        height: 50,
         width: 300,
         marginBottom: 20,
         color: "#FFF",

@@ -1,32 +1,28 @@
-import React, { Component } from 'react';
+import React , {Component} from 'react';
 import {
-  StyleSheet,
-  Text,
-  View, ScrollView
+    StyleSheet,
+    View,
+    Text
 } from 'react-native';
 
 import { commonStyle, containerStyles } from '../common/Styles';
 import MainHeading from '../components/MainHeading';
 import InputBox from '../components/InputBox';
 import CommonButton from '../components/Button';
-import ForgotPassword from '../components/ForgotPassword';
+import BackToLogin from '../components/BackToLogin';
 
-
-export default class Login extends Component {
+export default class ForgotPasswordPage extends Component {
 
   render() {
     return (
       <View style={[styles.container, commonStyle.background]}>
-        <MainHeading />
+        <MainHeading 
+            landscapeFlexGrow = {1}
+            portraitFlexGrow = {1}
+        />
         <View style={[styles.formContainer]}>
           <InputBox
-            placeholder="Email or username"
-            returnKeyType="next"
-            inputRef='usenameFeald'
-            onSubmitEditing={() => this.passwordInput.focus()}
-          />
-          <InputBox
-            placeholder="Password"
+            placeholder="Enter your Email"
             secureTextEntry={true}
             returnKeyType="go"
             inputRef={(passwordInput) => this.passwordInput = passwordInput}
@@ -35,8 +31,8 @@ export default class Login extends Component {
           <CommonButton
             title="Login"
           />
-          <ForgotPassword />
         </View>
+        <BackToLogin/>
         
 
       </View>

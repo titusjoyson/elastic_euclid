@@ -7,5 +7,7 @@ import {
 
 import Signup from './src/screens/SignupPage';
 import Login from './src/screens/LoginMain';
+import ForgotPasswordPage from './src/screens/ForgotPassword';
+import AdditionalDetails from './src/screens/AdditionalDetails';
 
-AppRegistry.registerComponent('elastic_euclid', () => Signup);
+AppRegistry.registerComponent('elastic_euclid', () => AdditionalDetails);

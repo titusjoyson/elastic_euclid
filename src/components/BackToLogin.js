@@ -17,9 +17,9 @@ export default class BackToLogin extends Component {
         return (
             <TouchableNativeFeedback
                 onPress={this._redirectToLogin}
-                style={{flex:1}}
+                style={style.container}
             >
-                <View>
+                <View style={style.textWrapper}>
                     <Text style={style.backToLogin}>Back to Login</Text>
                 </View>
             </TouchableNativeFeedback>
@@ -28,6 +28,12 @@ export default class BackToLogin extends Component {
 }
 
 const style = StyleSheet.create({
+    container:{
+        flex:1,
+    },
+    textWrapper:{
+        padding: 15
+    },
     backToLogin: {
         textAlign: 'center',
         color: "rgba(255,255,255,0.9)",

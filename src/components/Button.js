@@ -23,7 +23,7 @@ const style = StyleSheet.create({
         marginBottom: 20,
         height: 40,
         width: 300,
-        backgroundColor: 'rgba(255,255,255,0.7)',
+        backgroundColor: 'rgba(255,255,255,0.9)',
         paddingVertical: 10,
         borderRadius: 8
     },
