@@ -10,8 +10,9 @@
     "flow": "^0.2.3",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
-    "react-native-country-picker-modal": "^0.3.0-rc1",
-    "react-native-orientation": "^1.17.0"
+    "react-native-datepicker": "^1.6.0",
+    "react-native-orientation": "^1.17.0",
+    "react-native-vector-icons": "^4.2.0"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
