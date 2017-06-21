@@ -26,7 +26,7 @@ export default class SelectLocation extends Component {
         }
     }
     componentDidMount() {
-
+        
     }
 
     setModalVisible(visible) {
@@ -158,9 +158,6 @@ export default class SelectLocation extends Component {
                     </View>
                 </Modal>
             </View>
-
-
-
         )
     }
 }

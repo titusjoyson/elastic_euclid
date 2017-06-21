@@ -17,7 +17,10 @@ export default class Login extends Component {
   render() {
     return (
       <View style={[styles.container, commonStyle.background]}>
-        <MainHeading />
+        <MainHeading
+          landscapeFlexGrow={1}
+          portraitFlexGrow={1}
+        />
         <View style={[styles.formContainer]}>
           <InputBox
             placeholder="Email or username"
@@ -37,7 +40,7 @@ export default class Login extends Component {
           />
           <ForgotPassword />
         </View>
-        
+
 
       </View>
     )
@@ -53,5 +56,6 @@ const styles = StyleSheet.create({
   formContainer: {
     flex: 1,
     padding: 20,
-  }
+    justifyContent: 'center',
+  },
 });

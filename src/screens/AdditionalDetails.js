@@ -76,11 +76,11 @@ export default class AdditionalDetails extends Component {
                     </View>
 
                     <SelectLocation />
-
+                    <CommonButton
+                        title="next"
+                    />
                 </View>
-                <CommonButton
-                    title="next"
-                />
+
                 <BackToLogin />
 
             </View>
@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
         padding: 20,
     },
     input: {

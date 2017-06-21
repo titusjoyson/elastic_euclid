@@ -10,4 +10,6 @@ import Login from './src/screens/LoginMain';
 import ForgotPasswordPage from './src/screens/ForgotPassword';
 import AdditionalDetails from './src/screens/AdditionalDetails';
 
-AppRegistry.registerComponent('elastic_euclid', () => AdditionalDetails);
+import ProfilePage from './src/screens/ProfilePage';
+
+AppRegistry.registerComponent('elastic_euclid', () => ProfilePage);

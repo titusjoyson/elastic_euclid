@@ -1,8 +1,8 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 import {
-    StyleSheet,
-    View,
-    Text
+  StyleSheet,
+  View,
+  Text
 } from 'react-native';
 
 import { commonStyle, containerStyles } from '../common/Styles';
@@ -16,9 +16,9 @@ export default class ForgotPasswordPage extends Component {
   render() {
     return (
       <View style={[styles.container, commonStyle.background]}>
-        <MainHeading 
-            landscapeFlexGrow = {1}
-            portraitFlexGrow = {1}
+        <MainHeading
+          landscapeFlexGrow={1}
+          portraitFlexGrow={1}
         />
         <View style={[styles.formContainer]}>
           <InputBox
@@ -32,8 +32,9 @@ export default class ForgotPasswordPage extends Component {
             title="Login"
           />
         </View>
-        <BackToLogin/>
-        
+
+        <BackToLogin />
+
 
       </View>
     )
@@ -48,6 +49,9 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: 20,
-  }
+  },
 });

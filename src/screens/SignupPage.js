@@ -36,8 +36,8 @@ export default class Signup extends Component {
     }
 
     _renderInputFeals() {
-        if(this.state.show == "one"){
-            return(
+        if (this.state.show == "one") {
+            return (
                 <View style={[styles.formContainer]}>
                     <InputBox
                         placeholder="Full Name"
@@ -63,8 +63,8 @@ export default class Signup extends Component {
                     />
                 </View>
             )
-        }else if(this.state.show == "two"){
-            return(
+        } else if (this.state.show == "two") {
+            return (
                 <View style={[styles.formContainer]}>
                     <InputBox
                         placeholder="Password"
@@ -97,7 +97,10 @@ export default class Signup extends Component {
         const height = Dimensions.get('window').height;
         return (
             <View style={[styles.container, commonStyle.background]}>
-                <MainHeading />
+                <MainHeading
+                    landscapeFlexGrow={1}
+                    portraitFlexGrow={1}
+                />
                 {this._renderInputFeals()}
                 <BackToLogin />
             </View>
@@ -119,5 +122,6 @@ const styles = StyleSheet.create({
     formContainer: {
         flex: 1,
         padding: 20,
-    }
+        justifyContent: 'center',
+    },
 });
