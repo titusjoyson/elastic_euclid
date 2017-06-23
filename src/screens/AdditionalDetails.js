@@ -21,7 +21,6 @@ export default class AdditionalDetails extends Component {
         super(props);
         this.state = {
             modalVisible: false,
-            date: "2016-05-15",
             dobText: "",
             dobObject: ""
         }

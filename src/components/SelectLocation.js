@@ -25,9 +25,6 @@ export default class SelectLocation extends Component {
             place_id: ""
         }
     }
-    componentDidMount() {
-        
-    }
 
     setModalVisible(visible) {
         this.setState({ modalVisible: visible });
@@ -115,21 +112,39 @@ export default class SelectLocation extends Component {
         )
     }
 
+    _renderIcon(need) {
+        if (!need) {
+            return (<Icon style={styles.icon} name="map-marker" size={20} color="#FFF" />)
+        }
+    }
+
+    _renderStyle(need) {
+        if (need) {
+            return (styles.whiteInput)
+        } else {
+            return (styles.input)
+        }
+    }
+
     render() {
         return (
-
             <View >
                 <TouchableOpacity onPress={(event) => { this.setModalVisible(true) }}>
                     <View style={styles.iconInputWrapper}>
                         <InputBox
-                            placeholder="Enter your location"
+                            placeholder="You are living in"
                             onChangeText={(text) => { this.setState({ formatedString: this.state.formatedString }) }}
                             value={this.state.formatedString}
-                            style={styles.input}
+                            defaultValue={this.state.defaultValue}
+                            onSubmitEditing={this.state.onSubmitEditing}
                             inputRef={(enterLocation) => this.enterLocation = enterLocation}
                             editable={false}
+                            noIcon={false}
+                            {...this.props}
+                            style={this._renderStyle(this.props.noIcon)}
                         />
-                        <Icon style={styles.icon} name="map-marker" size={20} color="#FFF" />
+                        {this._renderIcon(this.props.noIcon)}
+
                     </View>
                 </TouchableOpacity>
 
@@ -162,7 +177,7 @@ export default class SelectLocation extends Component {
     }
 }
 
-const styles = StyleSheet.create({
+var styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -197,6 +212,14 @@ const styles = StyleSheet.create({
         width: 250,
         marginBottom: 20,
         color: "#FFF",
+        paddingHorizontal: 10,
+        fontSize: 16
+    },
+    whiteInput: {
+        height: 50,
+        width: 300,
+        marginBottom: 20,
+        color: "#000",
         paddingHorizontal: 10,
         fontSize: 16
     },
