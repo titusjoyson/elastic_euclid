@@ -9,7 +9,8 @@ import {
     Dimensions,
     Easing,
     ViewPagerAndroid,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native';
 
 import { commonStyle, containerStyles } from '../common/Styles';
@@ -35,7 +36,9 @@ export default class SliderComponent extends Component {
         ];
         const newsItem = newsData.map((news, key) => {
             return (
+                
                 <View key={key} style={[styles.topNewsItem, { backgroundColor: "gray", }]}>
+                    <TouchableOpacity style={{flex:1}}>
                     <View style={styles.canvasContainer}>
                         <Image
                             style={styles.profileImage}
@@ -46,7 +49,9 @@ export default class SliderComponent extends Component {
                     <View style={styles.footerItems}>
                         <Text style={styles.footerItemsText}>{news.title}</Text>
                     </View>
+                    </TouchableOpacity>
                 </View>
+                
             )
         })
 
@@ -76,8 +81,9 @@ const styles = StyleSheet.create({
     topNewsItem: {
         flex: 1,
         width: 250,
-        backgroundColor: "gray",
-        marginRight: 6
+        backgroundColor: "rgba(232,78,64,0.9)",
+        marginRight: 6,
+        elevation: 3
     },
     pagerStyle: {
         flex: 1,

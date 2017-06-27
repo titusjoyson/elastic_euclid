@@ -9,6 +9,9 @@ const commonStyle = StyleSheet.create({
   },
   inpageBackground: {
     backgroundColor: "#F5F5F5",
+  },
+  feedBackground:{
+    backgroundColor: "#e6e6e6",
   }
 });
 

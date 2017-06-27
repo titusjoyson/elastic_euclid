@@ -13,5 +13,6 @@ import AdditionalDetails from './src/screens/AdditionalDetails';
 import ProfilePage from './src/screens/ProfilePage';
 import ProfileEditPage from './src/screens/ProfileEditPage';
 import Tab from './src/screens/Tab';
+import ComponentOne from './src/screens/test';
 
 AppRegistry.registerComponent('elastic_euclid', () => Tab);

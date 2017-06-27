@@ -8,13 +8,14 @@ import {
     Alert,
     Animated,
     Dimensions,
-    Easing
+    Easing,
+    ScrollView
 } from 'react-native';
 
 import { commonStyle, containerStyles } from '../../common/Styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import SliderComponent from '../../components/SliderComponent';
+import Feed from '../../components/main/Feed';
 
 export default class Home extends Component {
     constructor(props) {
@@ -24,24 +25,24 @@ export default class Home extends Component {
 
     render() {
         return (
-            <View style={[styles.container]}>
-                <SliderComponent />
                 <View style={[styles.feedContainer]}>
+                    <Feed
 
+                    />
                 </View>
-            </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
-        flexDirection: "column", 
+        flex: 1,
+        flexDirection: "column",
         justifyContent: "flex-start"
     },
-    feedContainer:{
-        flex:1,
-        backgroundColor: "green"
+    feedContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 });

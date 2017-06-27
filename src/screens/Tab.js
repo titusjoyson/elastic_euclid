@@ -27,10 +27,11 @@ export default class TopTab extends Component {
             menuActive: false,
             aniStartValue: 0,
             aniEndValue: 0,
-        }
+        };
+
         this.animatedValue = new Animated.Value(0)
     }
-
+    
     animate(toVal) {
         Animated.timing(
             this.animatedValue,
@@ -47,6 +48,13 @@ export default class TopTab extends Component {
             searchActive: (actTab == "searchActive") ? true : false,
             menuActive: (actTab == "menuActive") ? true : false,
         });
+    }
+
+    _renderScreen() {
+        var home = <Home/>;
+        if(this.state.homeActive){
+            return (home)
+        }
     }
 
     render() {
@@ -68,7 +76,7 @@ export default class TopTab extends Component {
         })
 
         return (
-            <View style={[styles.wrapper, commonStyle.inpageBackground]}>
+            <View style={[styles.wrapper, commonStyle.feedBackground]}>
                 <View style={styles.topContainer}>
                     <View style={styles.container}>
                         <TabItem
@@ -92,12 +100,8 @@ export default class TopTab extends Component {
                     </View>
                     <Animated.View style={[tabUnderlineStyle, { marginLeft: movingMargin },]} />
                 </View>
-                <ViewPagerAndroid 
-                    style={{flex:1,flexDirection: "column", justifyContent: "flex-start"}}
-                    scrollEnabled={true}
-                    initialPage={0}>
-                    <Home/>
-                </ViewPagerAndroid>
+
+                {this._renderScreen()}
             </View>
         )
     }
